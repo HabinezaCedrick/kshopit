@@ -1,19 +1,11 @@
 import React, { Fragment, useEffect } from 'react'
-
 import MetaData from '../layout/MetaData'
 import CheckoutSteps from './CheckoutSteps'
-
 import { useAlert } from 'react-alert'
 import { useDispatch, useSelector } from 'react-redux'
 import { createOrder, clearErrors } from '../../actions/orderActions'
-
 import { useStripe, useElements, CardNumberElement, CardExpiryElement, CardCvcElement } from '@stripe/react-stripe-js'
-
 import axios from 'axios'
-
-
-
-
 
 const options = {
     style: {
@@ -25,11 +17,6 @@ const options = {
         }
     },
 };
-
-
-
-
-
 
 const Payment = ({ history }) => {
 
@@ -165,7 +152,6 @@ const payAfter = async() => {
             <CheckoutSteps shipping confirmOrder payment />
 
             ACCEPT PAYMENTS METHODS: <img src="/images/card2.jpg" />
-            
 
             <div className="row wrapper col-21 col-lg-18 mt-3">
             <div className="row d-flex justify-content-between">
@@ -177,7 +163,7 @@ id="afripayform"className="shadow-lg">
 <input type="hidden" name="currency" value="RWF" ></input>
 <input type="hidden" name="comment" value="Order 122"></input>
 <input type="hidden" name="client_token" value=""></input>
-<input type="hidden" name="return_url" value="http://localhost:3000/success"></input>
+<input type="hidden" name="return_url" value="http://kshopit.herokuapp.com/success"></input>
 <input type="hidden" name="app_id" value="10c91e7ce9366b9641a7b999bf76ccb9"></input>
 <input type="hidden" name="app_secret" value="JDJ5JDEwJC4yaUpy"></input>
                             
